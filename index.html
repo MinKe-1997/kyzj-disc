@@ -9,29 +9,26 @@
         /* 设置 body 为 flex 布局，居中显示内容 */
         body {
             display: flex;
-            justify-content: center;
-            /* 水平居中 */
-            align-items: center;
-            /* 垂直居中 */
-            height: 100vh;
-            /* 设置高度为视口高度，确保内容垂直居中 */
-            margin: 0;
-            /* 清除默认边距 */
-            background-color: #f4f4f4;
-            /* 可选的背景色 */
+            justify-content: center;  /* 水平居中 */
+            align-items: center;  /* 垂直居中 */
+            height: 100vh;  /* 设置高度为视口高度，确保内容垂直居中 */
+            margin: 0;  /* 清除默认边距 */
+            background-color: #f4f4f4;  /* 可选的背景色 */
+            overflow: hidden;  /* 防止页面滚动 */
         }
 
         /* 图片容器的样式 */
         .photo {
-            text-align: center;
-            /* 确保图片在容器内居中 */
+            max-width: 100%;  /* 容器最大宽度为 100% */
+            text-align: center;  /* 确保图片在容器内居中 */
+            display: flex;
+            justify-content: center;  /* 水平居中 */
         }
 
         img {
-            max-width: 100%;
-            /* 确保图片在小屏幕上不会溢出 */
-            height: auto;
-            /* 保持宽高比 */
+            max-width: 100%;  /* 图片的最大宽度为容器宽度 */
+            max-height: 100vh;  /* 限制图片最大高度为视口高度 */
+            height: auto;  /* 保持宽高比 */
         }
     </style>
 </head>
