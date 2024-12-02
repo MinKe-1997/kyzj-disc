@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>背景图片页面</title>
     <style>
         /* 设置 body 为 flex 布局，居中显示内容 */
         body {
@@ -19,24 +19,19 @@
 
         /* 图片容器的样式 */
         .photo {
-            max-width: 500px;  /* 限制容器的最大宽度为 500px */
-            width: 100%;  /* 容器宽度自适应 */
-            text-align: center;  /* 确保图片在容器内居中 */
-            display: flex;
-            justify-content: center;  /* 水平居中 */
-        }
-
-        img {
-            max-width: 100%;  /* 图片的最大宽度为容器宽度 */
-            max-height: 100vh;  /* 限制图片最大高度为视口高度 */
-            height: auto;  /* 保持宽高比 */
+            width: 100vw;  /* 容器宽度为视口宽度的 80% */
+            height: 100vh;  /* 容器高度为视口高度的 80% */
+            background-image: url('https://raw.githubusercontent.com/MinKe-1997/kyzj-disc/main/image.jpg');
+            background-size: contain;  /* 背景图像按比例缩放并完整显示 */
+            background-position: center;  /* 背景图像居中显示 */
+            background-repeat: no-repeat;  /* 防止背景图像重复 */
         }
     </style>
 </head>
 
 <body>
     <div class="photo">
-        <img src="https://raw.githubusercontent.com/MinKe-1997/kyzj-disc/main/image.jpg" alt="图片描述">
+        <!-- 这里不需要图片标签，因为图片已经作为背景设置 -->
     </div>
 </body>
 
